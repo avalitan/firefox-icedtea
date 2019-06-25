@@ -1,8 +1,4 @@
 #!/bin/bash
-#
-# Simple more like example wrapper running script
-#
-#
 
 release=latest
 
