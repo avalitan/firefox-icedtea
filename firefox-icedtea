@@ -1,0 +1,25 @@
+#!/bin/bash
+#
+# Simple more like example wrapper running script
+#
+#
+
+release=latest
+
+dockid=$(docker ps -aq --filter "name=firefox-icedtea")
+
+if [[ "a$dockis" == "" ]]; then
+
+# Run docker image
+docker run --net=host \
+	--env="DISPLAY" \
+	--volume="$HOME/.Xauthority:/home/firefox/.Xauthority:rw" \
+	--name="firefox-icedtea" \
+	--interactive \
+	--tty \
+	--detach \
+	avalitan/firefox-icedtea:$release
+
+else
+	socker start $dockid
+fi
