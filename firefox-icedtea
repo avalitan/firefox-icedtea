@@ -4,7 +4,7 @@ release=latest
 
 dockid=$(docker ps -aq --filter "name=firefox-icedtea")
 
-if [[ "a$dockis" == "" ]]; then
+if [[ "a$dockis" == "a" ]]; then
 
 # Run docker image
 docker run --net=host \
