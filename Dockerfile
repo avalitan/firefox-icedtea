@@ -11,7 +11,7 @@ USER firefox
 
 WORKDIR /home/firefox
 
-RUN mkdir -p /home/firefox/.config/icedtea-web/ && echo "deployment.security.level=ALLOW_UNSIGNED\ndeployment.security.sandbox.awtwarningwindow=false\ndeployment.manifest.attributes.check=NONE" > /home/firefox/.config/icedtea-web/deployment.properties && mkdir -p /home/firefox/.mozilla/firefox/hujo8m11.default/ && echo "user_pref("app.update.auto", false);\nuser_pref("app.update.enabled", false);\nuser_pref("browser.newtabpage.enhanced", true);\nuser_pref("browser.search.suggest.enabled", false);\nuser_pref("browser.search.update", false);\nuser_pref("browser.shell.checkDefaultBrowser", false);\nuser_pref("datareporting.healthreport.uploadEnabled", false);\nuser_pref("browser.shell.checkDefaultBrowser", false);\nuser_pref("toolkit.startup.last_success", 1561413908);" > /home/firefox/.mozilla/firefox/hujo8m11.default/prefs.js && echo "[General]\nStartWithLastProfile=1\n\n[Profile0]\nName=default\nIsRelative=1\nPath=hujo8m11.default\nDefault=1\n" > /home/firefox/.mozilla/firefox/profiles.ini && echo "alias firefox='/opt/firefox/firefox --no-remote'" >> /home/firefox/.bash_aliases
+RUN mkdir -p /home/firefox/.config/icedtea-web/ && echo "deployment.security.level=ALLOW_UNSIGNED\ndeployment.security.sandbox.awtwarningwindow=false\ndeployment.manifest.attributes.check=NONE" > /home/firefox/.config/icedtea-web/deployment.properties && echo "alias firefox='/opt/firefox/firefox --no-remote'" >> /home/firefox/.bash_aliases
 
 ENV DISPLAY=":0"
 
