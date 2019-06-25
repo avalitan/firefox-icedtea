@@ -17,5 +17,5 @@ docker run --net=host \
 	avalitan/firefox-icedtea:$release
 
 else
-	socker start $dockid
+	docker start $dockid
 fi
