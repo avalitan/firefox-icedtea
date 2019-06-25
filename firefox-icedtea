@@ -19,3 +19,6 @@ docker run --net=host \
 else
 	docker start $dockid
 fi
+if [[ "a$1" != "a" ]]; then
+	docker run $dockid /opt/firefox.sh "$1"
+fi
