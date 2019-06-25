@@ -3,7 +3,7 @@
 ## WHY ?
 When you are SysAdmin and it comes to connecting to old unsupported management interfaces, often packed with Java technology it's propably broken with modern standards.
 
-## How to run it ?
+## Prepare ?
 Only thing you need is configured docker and right permissions in your system for your user for docker.
 If your user cannot run docker add your user to docker group in the system.
 
