@@ -11,7 +11,7 @@ USER firefox
 
 WORKDIR /home/firefox
 
-RUN mkdir -p /home/firefox/.config/icedtea-web/ && echo "deployment.security.level=ALLOW_UNSIGNED\ndeployment.security.sandbox.awtwarningwindow=false\ndeployment.manifest.attributes.check=NONE" > /home/firefox/.config/icedtea-web/deployment.properties && echo "alias firefox='/opt/firefox/firefox --no-remote'" >> /home/firefox/.bash_aliases
+RUN mkdir -p /home/firefox/.config/icedtea-web/ && echo "deployment.security.level=ALLOW_UNSIGNED\ndeployment.security.sandbox.awtwarningwindow=false\ndeployment.manifest.attributes.check=NONE\n" > /home/firefox/.config/icedtea-web/deployment.properties && echo "alias firefox='/opt/firefox/firefox --no-remote'" >> /home/firefox/.bash_aliases
 
 ENV DISPLAY=":0"
 
