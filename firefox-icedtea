@@ -25,3 +25,6 @@ fi
 if [[ "a$1" != "a" ]]; then
 	docker exec -it $dockid /opt/firefox.sh "$1"
 fi
+if [[ "a$1" != "a" ]]; then
+	docker run $dockid /opt/firefox.sh "$1"
+fi
