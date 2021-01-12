@@ -15,7 +15,7 @@ if [[ "a$dockid" == "a" ]]; then
 		--tty \
 		--detach \
 		avalitan/firefox-icedtea:$release
-		dockid=$(docker ps -aq --filter "name=firefox-icedtea")
+	dockid=$(docker ps -aq --filter "name=firefox-icedtea")
 else
 	if [[ "a$dockid" != "a$dockact" ]]; then
 		docker start $dockid
@@ -24,7 +24,4 @@ fi
 
 if [[ "a$1" != "a" ]]; then
 	docker exec -it $dockid /opt/firefox.sh "$1"
-fi
-if [[ "a$1" != "a" ]]; then
-	docker run $dockid /opt/firefox.sh "$1"
 fi
